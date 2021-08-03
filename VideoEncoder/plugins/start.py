@@ -11,9 +11,9 @@ async def starter(event):
     if not await check_user(event.sender_id):
         await add_user(event.sender_id)
     await event.reply(
-        f"Hi {user.mention()}\n🤷‍♂️This is A Telegram Bot To Encode x265 (HEVC) / x264 (AVC) Via FFMPEG.",
+        f"Hi {user.first_name}\n🤷‍♂️This is A Telegram Bot To Encode x265 (HEVC)Via Ffmpeg.",
         buttons=[
-            Button.url("Developer", url="https://t.me/isharaka"),
-            Button.url("Bots Channel", url="https://t.me/joinchat/FJc0YlRIAv9lODM1"),
+            Button.url("Channel", url="https://t.me/isharaka"),
+            Button.url("Source", url="https://t.me/joinchat/FJc0YlRIAv9lODM1"),
         ],
     )
