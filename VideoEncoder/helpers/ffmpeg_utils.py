@@ -29,16 +29,16 @@ def get_codec(filepath, channel="v:0"):
 
 def encode(filepath):
     basefilepath = os.path.splitext(filepath)[0]
-    output_filepath = basefilepath + " HEVC" + ".mp4"
+    output_filepath = basefilepath + " [HEVC]" + ".mp4"
     assert output_filepath != filepath
     if os.path.isfile(output_filepath):
-        logging.info('Skipping "{}": file already exists 🤷‍♂️'.format(output_filepath))
+        logging.info('Skipping "{}": file already exists'.format(output_filepath))
         return None
     logging.info(filepath)
     # Get the video channel codec
     video_codec = get_codec(filepath, channel="v:0")
     if video_codec == []:
-        logging.info("Skipping: no video codec reported 🤷‍♂️")
+        logging.info("Skipping: no video codec reported")
         return None
     # Video transcode options
     if video_codec[0] == "hevc":
@@ -52,10 +52,10 @@ def encode(filepath):
         # video option to h265 / hvc1
         codec_opts = "-c:v libx265"
         profile_opts = "-profile:v high"
-        tag_opts =  "-tag:v hvc1"
+        tag_opts =  "-tag:v avc1"
         tune_opts = "-tune animation"
         lvl_opts = "-level 3.1"
-        crf_opts = "-crf 35"
+        crf_opts = "-crf 24"
         preset_opts = "-preset slow"
         Resolution_opts = "-vf  scale=1280:720"
         core_opts = "-threads 8"
