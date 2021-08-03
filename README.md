@@ -29,4 +29,4 @@ python3 -m VideoEncoder
 - Copyright &copy; 2021 &mdash; [Adnan Ahmad](https://github.com/viperadnan-git); [xditya](https://xditya.me/github).
 - Licensed under the terms of the [GNU General Public License Version 3 &dash; 29 June 2007](./LICENSE)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/yuno74/1080p)</br>
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/snpjames/x265Encoder)</br>
