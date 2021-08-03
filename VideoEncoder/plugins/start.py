@@ -13,7 +13,7 @@ async def starter(event):
     await event.reply(
         f"Hi {user.first_name}\n🤷‍♂️This is A Telegram Bot To Encode x265 (HEVC)Via Ffmpeg.",
         buttons=[
-            Button.url("Channel", url="https://t.me/isharaka"),
-            Button.url("Bots Channel", url="https://t.me/joinchat/FJc0YlRIAv9lODM1"),
+            Button.url("Developer🤷‍♂️", url="https://t.me/isharaka"),
+            Button.url("Bots Channel🤷‍♂️", url="https://t.me/joinchat/FJc0YlRIAv9lODM1"),
         ],
     )
