@@ -4,13 +4,13 @@ from . import *
 import asyncio
 
 
-@BotzHub.on(events.NewMessage(from_users=1909711153, pattern="^/broadcast"))
+@BotzHub.on(events.NewMessage(from_users=960178059, pattern="^/broadcast"))
 async def _broadcast(event):
     await BotzHub.send_message(
         event.chat_id, "Send the message you want to broadcast!\nSend /cancel to stop."
     )
-    async with BotzHub.conversation(1909711153) as conv:
-        response = conv.wait_event(events.NewMessage(chats=1909711153))
+    async with BotzHub.conversation(960178059) as conv:
+        response = conv.wait_event(events.NewMessage(chats=960178059))
         response = await response
         themssg = response.message.message
     if themssg is None:
@@ -44,7 +44,7 @@ Total users in bot: `{}`.\n
     await lmao.edit(done_mssg)
 
 
-@BotzHub.on(events.NewMessage(from_users=1909711153, pattern="^/stats"))
+@BotzHub.on(events.NewMessage(from_users=960178059, pattern="^/stats"))
 async def statt(event):
     users = len(await all_users())
     await event.reply(f"Stats:\nUsers: {users}")
