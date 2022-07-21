@@ -37,9 +37,9 @@ async def add_task(event):
             )
             remove(new_file)
             remove(thumb)
-            
+            rmtree("downloads/")
             await msg.edit(" 🟢 Video Encoded 🟢\n\n#encoded ")
-                  rmtree("downloads/")
+                  
         else:
             await msg.edit(
                 " 🔴 Something wents wrong while encoding your file."
