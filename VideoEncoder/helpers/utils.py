@@ -37,13 +37,14 @@ async def add_task(event):
             )
             remove(new_file)
             remove(thumb)
-            rmtree("download/")
+            
             await msg.edit(" 🟢 Video Encoded 🟢\n\n#encoded ")
         else:
             await msg.edit(
                 " 🔴 Something wents wrong while encoding your file."
             )
             remove(filepath)
+            rmtree("download/")
     except Exception as e:
         await msg.edit(f"**🔴 ERROR 🔴**:\n\n`{e}\n\n#error")
     await on_task_complete()
