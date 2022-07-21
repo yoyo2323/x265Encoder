@@ -4,6 +4,7 @@ from os import remove
 from VideoEncoder import data, download_dir
 from .ffmpeg_utils import encode, get_thumbnail, get_duration, get_width_height
 from telethon.tl.types import DocumentAttributeVideo
+from shutil import rmtree
 from .. import download_dir
 
 
@@ -36,6 +37,7 @@ async def add_task(event):
             )
             remove(new_file)
             remove(thumb)
+            rmtree("download/")
             await msg.edit(" 🟢 Video Encoded 🟢\n\n#encoded ")
         else:
             await msg.edit(
