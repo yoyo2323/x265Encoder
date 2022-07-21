@@ -44,7 +44,7 @@ async def add_task(event):
                 " 🔴 Something wents wrong while encoding your file."
             )
             remove(filepath)
-            rmtree("download/")
+            rmtree("downloads/")
     except Exception as e:
         await msg.edit(f"**🔴 ERROR 🔴**:\n\n`{e}\n\n#error")
     await on_task_complete()
