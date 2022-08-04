@@ -1,5 +1,5 @@
 lenguage = "python3"
-channel = "stable-21_11"
+channel = "stable-22_05"
 pattern = "**/*.py"
 [packager]
 language = "python3"
