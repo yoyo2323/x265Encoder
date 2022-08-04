@@ -1,6 +1,7 @@
 lenguage = "python3"
 channel = "stable-22_05"
 pattern = "**/*.py"
+run = "bash run.sh"
 [packager]
 language = "python3"
 ignoredPackages = ["unit_tests"]
