@@ -1,6 +1,6 @@
 lenguage = "python3"
 channel = "stable-21_11"
 pattern = "**/*.py"
-run = "
+run = "python /VideoEncoder/__main__.py"
 
 
