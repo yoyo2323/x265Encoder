@@ -7,6 +7,7 @@ ignoredPackages = ["unit_tests"]
   enabledForHosting = false
   packageSearch = true
   guessImports = true
-run = "python3 -m VideoEncoder"
+[interpreter]
+  [interpreter.command] = "python3 -m VideoEncoder"
 
 
