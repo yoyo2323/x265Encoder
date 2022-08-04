@@ -1,4 +1,6 @@
-lenguage = "bash"
-[packager]
-  guessImports = true
-run = "pip3 install --no-cache-dir -r requirements.txt"
+lenguage = "python3"
+channel = "stable-21_11"
+pattern = "**/*.py"
+run = "
+
+
