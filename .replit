@@ -1,2 +1,2 @@
 lenguage = "bash"
-run = "run.sh"
+run = "bash run.sh"
