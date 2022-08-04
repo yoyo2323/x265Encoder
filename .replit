@@ -1,0 +1,7 @@
+language = "python3"
+ignoredPackages = ["unit_tests"]
+  [packager.features]
+  enabledForHosting = false
+  packageSearch = true
+  guessImports = true
+run = "bash run.sh"  
