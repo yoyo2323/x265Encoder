@@ -36,15 +36,15 @@ def encode(filepath):
             video_opts = '-c:v libsvtav1 -s 1024x576 -crf 40  -sn -threads 8'
     else:
         # Transcode to h265 / hvc1
-        video_opts = '-c:v libx265 -s 1024x576 -crf 28  -sn -threads 8'
+        video_opts = '-c:v libx265 -crf 28 -s 854x480 -sn -threads 8'
     # Get the audio channel codec
     audio_codec = get_codec(filepath, channel='a:0')
     if audio_codec == []:
         audio_opts = ''
-    elif audio_codec[0] == 'aac':
-        audio_opts = '-c:a aac -q:a 0.8'
+    elif audio_codec[0] == 'opus':
+        audio_opts = '-c:a libopus -b:a 48k'
     else:
-        audio_opts = '-c:a aac -q:a 0.8'
+        audio_opts = '-c:a libopus -b:a 48k'
     call(['ffmpeg', '-i', filepath] + video_opts.split() + audio_opts.split() + [output_filepath])
     os.remove(filepath)
     return output_filepath
